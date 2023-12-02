@@ -1,4 +1,4 @@
-package tdr.aoc.y2023.day1
+package tdr.aoc.y2023
 
 import tdr.aoc.utils.getInput
 

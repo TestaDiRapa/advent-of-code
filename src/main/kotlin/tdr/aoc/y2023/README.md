@@ -1,3 +1,4 @@
 # Advent of code 2k23
 
- - [x]: day 1 :rocket:
+* [X] Day 1 :rocket:
+* [X] Day 2 :large_blue_diamond: :large_orange_diamond:
