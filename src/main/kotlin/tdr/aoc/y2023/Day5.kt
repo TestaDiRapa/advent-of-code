@@ -7,67 +7,6 @@ import tdr.aoc.utils.toListOfLong
 import java.lang.Exception
 import kotlin.system.measureTimeMillis
 
-//fun getSeeds(input: String): List<Long> {
-//    val (_, rawSeeds) = input.split(":\\s+".toRegex())
-//    return rawSeeds.toListOfLong("\\s+".toRegex())
-//}
-//
-//fun getSeedsAsRange(input: String): Sequence<Long> {
-//    val ranges = getSeeds(input).chunked(2)
-//    return sequence {
-//        ranges.forEach { r ->
-//            val (start, range) = r
-//            yieldAll(start until (start + range))
-//        }
-//    }
-//}
-//
-//fun List<String>.toMappingFlow(): Pair<List<String>, MappingFlow> = fold(Pair(emptyList<String>(), emptyMap<String, Mapper>())) { acc, it ->
-//        val (flow, mappings) = acc
-//        val lines = it.split("\n")
-//        val flowStep = "([a-z\\-]+) map:".toRegex().find(lines.first())?.groupValues?.get(1)
-//            ?: throw Exception("Cannot find flow name in ${lines.first()}")
-//        val mapper = lines.drop(1).map {
-//            val (dest, src, step) = it.toListOfLong("\\s+".toRegex())
-//            Mapping(src, dest, step)
-//        }.let { Mapper(it) }
-//        Pair(
-//            flow + flowStep,
-//            mappings + (flowStep to mapper)
-//        )
-//    }.let {
-//        Pair(it.first, MappingFlow(it.second))
-//    }
-//
-//data class Mapping(val source: Long, val destination: Long, val range: Long) {
-//    fun map(input: Long) =
-//        if(input in (source until (source + range)))
-//            destination + (input - source)
-//        else null
-//}
-//
-//data class Mapper(
-//    val mappings: List<Mapping>
-//) {
-//
-//    fun map(input: Long) = mappings.firstNotNullOfOrNull {
-//        it.map(input)
-//    } ?: input
-//
-//}
-//
-//data class MappingFlow(
-//    val maps: Map<String, Mapper>
-//) {
-//
-//    tailrec fun mapEndToEnd(input: Long, flow: List<String>): Long {
-//        if(flow.isEmpty()) return input
-//        val mapper = maps.getValue(flow.first())
-//        return mapEndToEnd(mapper.map(input), flow.drop(1))
-//    }
-//
-//}
-
 data class RangeMap(
     val wholeRange: RangeSet = RangeSet(emptyList()),
     val rangeMap: Map<Range, Range> = emptyMap()
