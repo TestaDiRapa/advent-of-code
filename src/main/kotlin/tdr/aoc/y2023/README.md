@@ -5,3 +5,4 @@
 * [X] Day 3 :gear:
 * [X] Day 4 :black_joker:
 * [X] Day 5 :seedling:
+* [X] Day 6 :motor_boat:
