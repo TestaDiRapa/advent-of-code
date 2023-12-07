@@ -4,7 +4,7 @@ import tdr.aoc.utils.getInput
 import tdr.aoc.utils.toListOfInt
 import kotlin.math.pow
 
-data class Card(
+data class ScratchCard(
     val id: Int,
     val winningNumbers: List<Int>,
     val numbers: List<Int>
@@ -25,7 +25,7 @@ fun List<String>.toCards() = map {
     val (rawWinning, rawYours) = allNumbers.split("\\s+\\|\\s+".toRegex())
     val winning = rawWinning.toListOfInt("\\s+".toRegex())
     val yours = rawYours.toListOfInt("\\s+".toRegex())
-    Card(id.toInt(), winning, yours)
+    ScratchCard(id.toInt(), winning, yours)
 }
 
 suspend fun main() {
