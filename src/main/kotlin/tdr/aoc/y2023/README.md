@@ -7,5 +7,5 @@
 * [X] Day 5 :seedling:
 * [X] Day 6 :motor_boat:
 * [X] Day 7 :black_joker:
-* [] Day 8 :dromedary_camel:
+* [X] Day 8 :dromedary_camel:
 * [X] Day 9 :palm_tree:
